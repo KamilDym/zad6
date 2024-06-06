@@ -12,5 +12,5 @@ public class Prescription
     public int IdDoctor { get; set; }
     public virtual Doctor DoctorNavigator { get; set; }
 
-    public ICollection<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
+    public virtual ICollection<PrescriptionMedicament> PrescriptionMedicaments { get; set; }
 }

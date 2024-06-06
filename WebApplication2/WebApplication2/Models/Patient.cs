@@ -7,5 +7,5 @@ public class Patient
     public string LastName { get; set; }
     public DateTime Birthdate { get; set; }
 
-    public ICollection<Prescription> Prescriptions { get; set; }
+    public virtual ICollection<Prescription> Prescriptions { get; set; }
 }

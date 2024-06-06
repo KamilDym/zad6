@@ -7,5 +7,5 @@ public class Doctor
     public string LastName { get; set; }
     public string Email { get; set; }
 
-    public ICollection<Prescription> Prescriptions { get; set; }
+    public virtual ICollection<Prescription> Prescriptions { get; set; }
 }

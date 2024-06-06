@@ -19,23 +19,13 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // modelBuilder.Entity<Doctor>(builder =>
-        // {
-        //     builder.HasKey(e => e.IdDoctor);
-        //     builder.Property(e => e.IdDoctor).ValueGeneratedOnAdd();
-        //
-        //     builder.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
-        //     builder.Property(e => e.LastName).IsRequired().HasMaxLength(100);
-        //     builder.Property(e => e.Email).IsRequired().HasMaxLength(100);
-        // });
+        
 
         modelBuilder.ApplyConfiguration(new DoctorEfConfiguration());
         modelBuilder.ApplyConfiguration(new MedicamentEfConfiguration());
         modelBuilder.ApplyConfiguration(new PatientEfConfiguration());
         modelBuilder.ApplyConfiguration(new PrescriptionEfConfiguration());
         modelBuilder.ApplyConfiguration(new PrescriptionMedicamentEfConfiguration());
-
-        // modelBuilder.ApplyConfigurationsFromAssembly(typeof(Program).Assembly);
 
     }
 }
